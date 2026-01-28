@@ -1,4 +1,7 @@
 format: jb-book
 root: intro  # これがトップページになるファイル名 (intro.ipynb)
 chapters:
-  - file: toomre  # 拡張子(.ipynb)は不要です
+  - file: toomre　# 拡張子(.ipynb)は不要です
+　- file: sph_star_formation
+  - file: hydro_shock
+  - file: cosmology
