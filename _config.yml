@@ -1,0 +1,18 @@
+# Book settings
+title: Retro-Astro JAX Encyclopedia
+author: Your Name (Retro-Astro Project)
+logo: logo.png  # 後で画像を追加できます。無くてもOK。
+
+# Execution settings
+execute:
+  execute_notebooks: force  # 毎回ビルド時に再計算してグラフを描画する設定
+
+# Launch button settings (Colabへのリンク用)
+repository:
+  url: https://github.com/あなたのユーザー名/retro-astro-jax  # ★ここを書き換えてください
+  path_to_book: .
+  branch: main
+
+launch_buttons:
+  colab_url: "https://colab.research.google.com"
+  notebook_interface: "jupyterlab"
