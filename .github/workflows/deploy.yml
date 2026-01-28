@@ -1,0 +1,40 @@
+name: deploy-book
+
+# mainブランチにpushされたら動く
+on:
+  push:
+    branches:
+      - main
+
+# 権限設定
+permissions:
+  contents: write
+
+jobs:
+  deploy-book:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    # Pythonのセットアップ
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.9
+
+    # Jupyter BookとJAXのインストール
+    - name: Install dependencies
+      run: |
+        pip install jupyter-book jax jaxlib matplotlib
+
+    # 本のビルド
+    - name: Build the book
+      run: |
+        jupyter-book build .
+
+    # 公開用ブランチ(gh-pages)へアップロード
+    - name: GitHub Pages action
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./_build/html
