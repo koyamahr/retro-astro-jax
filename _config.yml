@@ -9,7 +9,7 @@ execute:
 
 # Launch button settings (Colabへのリンク用)
 repository:
-  url: https://github.com/あなたのユーザー名/retro-astro-jax  # ★ここを書き換えてください
+  url: https://github.com/koyamahr/retro-astro-jax  # ★ここを書き換えてください
   path_to_book: .
   branch: main
 
